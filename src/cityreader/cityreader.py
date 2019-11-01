@@ -27,10 +27,10 @@ def cityreader(cities=[]):
     count = 0
     for row in csv_reader:
       if count == 0:
-        pass
         count += 1
+        pass
       else:
-        cities.append(City(row[0], row[3], row[4]))
+        cities.append(City(row[0], float(row[3]), float(row[4])))
         count += 1
   print(f'Processed {count} Cities.')
   return cities
@@ -43,7 +43,7 @@ cityreader(cities)
 
 # Print the list of cities (name, lat, lon), 1 record per line.
 for c in cities:
-    print(c)
+    print(f"City: {c.name}, Lat: {c.lat}, Lon: {c.lon}")
 
 
 

@@ -78,7 +78,14 @@ class CityreaderTests(unittest.TestCase):
     
   def test_cityreader_correctness(self):
     for i in range(len(self.cities)):
+      #try:
+      #print(f"Expected City: {self.expected[i].name}, My City: {self.cities[i].name}")
+      #print(f"Expected lat: {self.expected[i].lat}, My lat: {self.cities[i].lat}, Difference: {self.expected[i].lat - self.cities[i].lat}")
+      #print(f"Expected lon: {self.expected[i].lon}, My City: {self.cities[i].lon}, Difference: {self.expected[i].lon - self.cities[i].lon}")
       self.assertTrue(check_city(self.cities[i], self.expected[i]))
+      #except:
+      # print(f"Failed at {i}" )
+
 
 
 if __name__ == '__main__':
